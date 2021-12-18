@@ -1,0 +1,67 @@
+﻿<Window x:Class="wpf15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <!-- Resources are named chunks of data defined seperated from the code and bundled with 
+    your application or component-->
+    <Window.Resources>
+        <local:NickNames x:Key="names">
+            <local:Nickname Name="Stuart" NickName="Stu"/>
+            <local:Nickname Name="Bruce" NickName="Dad"/> <!-- Each use the default constructor, and then set the Properties manually -->
+            <local:Nickname Name="Jenny" NickName="Mom"/>
+        </local:NickNames>
+        <Style x:Key="myStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="2" ></Setter>
+            <Setter Property="FontWeight" Value="Bold" ></Setter>
+            <Setter Property="FontStyle" Value="Italic"></Setter>
+        </Style>
+    </Window.Resources>
+    
+    <!-- Our Grid-->
+    <Grid x:Name="theGrid" DataContext="{StaticResource names}" > <!-- This refers to the resource within this Component, ie the Window-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <StackPanel  Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <!-- Note the markup extension, {Binding} below which allows for adding special processing
+            to attribute values like Text= below -->
+            <TextBlock Text="Name:"/> <TextBox x:Name="nameBox" Text="{Binding Path=Name}" />
+            <TextBlock Text="Nick:"/> <TextBox x:Name="nickNameBox" Text="{Binding Path=NickName}" />            
+        </StackPanel>
+        
+        <!-- List box will use its parents DataContext, which it finds on the Grid-->
+        <ListBox Grid.Row="1" Grid.Column="0" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True">
+            <!-- Define how to show the Item -->
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock Style="{StaticResource myStyle}" Text="{Binding Path=Name}"/>
+                        <TextBlock Text="{Binding Path=NickName}"/>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Grid.Row="2" x:Name="addButton" Content="Add" Click="addButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Width="128" Height="32" Fill="Yellow" Stroke="Black"/>
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+            
+    </Grid>
+</Window>

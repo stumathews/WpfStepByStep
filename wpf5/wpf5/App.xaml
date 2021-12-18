@@ -1,0 +1,14 @@
+﻿<!--Defines the App class derived from type Application.
+    Note: StartupUri Shows() MainWindow on Startup. 
+    Note: We dont explicitly need to invoke Run() as this
+    is handled by convienience by the runtime system
+    -->
+<Application x:Class="wpf5.App"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:local="clr-namespace:wpf5"             
+            StartupUri="MainWindow.xaml">
+<Application.Resources>
+         
+</Application.Resources>
+</Application>

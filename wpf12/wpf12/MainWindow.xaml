@@ -1,0 +1,41 @@
+﻿<Window x:Class="wpf12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf12"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <!-- Our Grid-->
+    <Grid x:Name="theGrid"> <!-- We will refer to this in the codebehind to set its data context-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <StackPanel  Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <!-- Note the markup extension, {Binding} below which allows for adding special processing
+            to attribute values like Text= below -->
+            <TextBlock Text="Name:"/> <TextBox x:Name="nameBox" Text="{Binding Path=Name}" />
+            <TextBlock Text="Nick:"/> <TextBox x:Name="nickNameBox" Text="{Binding Path=NickName}" />            
+        </StackPanel>
+        
+        <!-- List box will use its parents DataContext, which it finds on the Grid-->
+        <ListBox Grid.Row="1" Grid.Column="0" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True">
+            <!-- Define how to show the Item -->
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock Text="{Binding Path=Name}"/>
+                        <TextBlock Text="{Binding Path=NickName}"/>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Grid.Row="2" x:Name="addButton" Content="Add" Click="addButton_Click"/>
+    </Grid>
+</Window>
