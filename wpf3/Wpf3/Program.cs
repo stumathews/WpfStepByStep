@@ -3,14 +3,14 @@ using System.Windows;
 
 namespace Wpf3
 {
-    partial class MyApp : Application // Note we're deriving from Application
+    internal partial class MyApp : Application // Note we're deriving from Application
     {
 
         [STAThread]
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // We're creating an Application
-            MyApp app = new MyApp();
+            var app = new MyApp();
 
             // When it starts, we'll show a Window
             app.Startup += App_Startup;
@@ -21,7 +21,7 @@ namespace Wpf3
 
         private static void App_Startup(object sender, StartupEventArgs e)
         {
-            // My window
+            // This is a MyWindow window now!
             Window window = new MyWindow();
 
             // Show it

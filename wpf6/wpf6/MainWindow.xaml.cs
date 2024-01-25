@@ -27,7 +27,7 @@ namespace wpf6
 
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello World!");
+            MessageBox.Show(myButton.Content as string);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace wpf4.MyWindow
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello World!");
+            MessageBox.Show(myButton.Content as string);
         }
     }
 }

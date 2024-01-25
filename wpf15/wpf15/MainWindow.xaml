@@ -44,6 +44,7 @@
         <ListBox Grid.Row="1" Grid.Column="0" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True">
             <!-- Define how to show the Item -->
             <ListBox.ItemTemplate>
+                <!-- DataTemplates provide visual structure for underlying data -->
                 <DataTemplate>
                     <TextBlock>
                         <TextBlock Style="{StaticResource myStyle}" Text="{Binding Path=Name}"/>
@@ -53,7 +54,10 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <Button Grid.Row="2" x:Name="addButton" Content="Add" Click="addButton_Click">
+            <!-- Templates let you completely change the visual aspect of the control with your own interpretation of it. The rest of the 
+            control's internal functioning stays the same, eg. Events etc. -->
             <Button.Template>
+                <!--Controls templates is not concerned with the underlying data and is only concerned with  visuals -->
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
                         <Ellipse Width="128" Height="32" Fill="Yellow" Stroke="Black"/>

@@ -3,9 +3,9 @@ using System.Windows.Controls;
 
 namespace Wpf3
 {
-    partial class MyApp
+    internal partial class MyApp
     {
-        class MyWindow : Window
+        private class MyWindow : Window
         {
             public MyWindow()
             {
@@ -18,10 +18,12 @@ namespace Wpf3
                 // Ideally the event handlers and such stuff should be handled by coders,
                 // while the look and feel and placement should be handled by designers using XAML
 
-                Button myButton = new Button();
-                myButton.Content = "Click me baby, one more time!";
-                myButton.Width = 200;
-                myButton.Height = 25;
+                var myButton = new Button
+                {
+                    Content = "Click me baby, one more time!",
+                    Width = 200,
+                    Height = 25
+                };
                 myButton.Click += MyButton_Click;
 
                 // Set the windows main content to the button

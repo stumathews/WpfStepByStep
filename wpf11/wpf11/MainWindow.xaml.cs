@@ -27,7 +27,7 @@ namespace wpf11
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            screen.Text += (sender as ContentControl).Content as string;
+            screen.Text += (sender as ContentControl)?.Content as string;
         }
     }
 }

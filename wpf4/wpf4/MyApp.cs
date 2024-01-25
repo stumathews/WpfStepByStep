@@ -10,9 +10,9 @@ namespace wpf4
     class MyApp : Application
     {
         [STAThread]
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            MyApp app = new MyApp();
+            var app = new MyApp();
             app.Startup += App_Startup;
             app.Run();
         }
@@ -25,7 +25,7 @@ namespace wpf4
             // run C# to hook up the and setup the definition of the MyWindow1 class as defined in the Xaml 
             
             // We can just 'use' it as MyWindow1 (its comprised of Xaml and code behind)
-            MyWindow.MyWindow1 myWindow1 = new MyWindow.MyWindow1();
+            var myWindow1 = new MyWindow.MyWindow1();
             myWindow1.Show();
         }
     }

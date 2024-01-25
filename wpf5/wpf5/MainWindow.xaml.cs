@@ -27,7 +27,7 @@ namespace wpf5
 
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("hello world!");
+            MessageBox.Show(myButton.Content as string);
         }
     }
 }

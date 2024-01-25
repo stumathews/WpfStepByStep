@@ -24,5 +24,12 @@ namespace wpf8
         {
             InitializeComponent();
         }
+
+        private void MyButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(string.IsNullOrWhiteSpace(myTextBox.Text) 
+                ? "Type something" 
+                : myTextBox.Text);
+        }
     }
 }

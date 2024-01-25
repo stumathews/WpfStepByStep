@@ -9,7 +9,7 @@ namespace Wpf2
         static void Main(string[] args)
         {
             // We're creating an Application
-            MyApp app = new MyApp();
+            var app = new MyApp();
 
             // When it starts, we'll show a Window
             app.Startup += App_Startup;
@@ -21,8 +21,10 @@ namespace Wpf2
         private static void App_Startup(object sender, StartupEventArgs e)
         {
             // Arbitary window
-            Window window = new Window();
-            window.Title = "Hello World!";
+            var window = new Window
+            {
+                Title = "Hello World!"
+            };
 
             // Show it
             window.Show();

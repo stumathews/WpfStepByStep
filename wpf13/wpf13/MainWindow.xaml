@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     
-    <!-- Resources are named chunks of data defined seperated from the code and bundled with 
+    <!-- Resources are named chunks of data defined separated from the code and bundled with 
     your application or component-->
     <Window.Resources>
         <local:NickNames x:Key="names">
@@ -17,7 +17,7 @@
         </local:NickNames>
     </Window.Resources>
     
-    <!-- Our Grid-->
+    <!-- Our Grid: Notice how we explicitly set the datacontext so that children controls can use that for data binding -->
     <Grid x:Name="theGrid" DataContext="{StaticResource names}" > <!-- This refers to the resource within this Component, ie the Window-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition />

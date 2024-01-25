@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32002.261
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf2 - App.Run", "wpf2\Wpf2\Wpf2 - App.Run.csproj", "{80EDFC52-BCE7-4A9A-8C1F-C03E2B92E6C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf3 - Imperative Custom Window", "wpf3\Wpf3\Wpf3 - Imperative Custom Window.csproj", "{E30EA047-4FAD-42AE-978B-A4D04EC80E35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf3 - Custom Window using Code", "wpf3\Wpf3\Wpf3 - Custom Window using Code.csproj", "{E30EA047-4FAD-42AE-978B-A4D04EC80E35}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf4 - Custom Window using Xaml", "wpf4\wpf4\wpf4 - Custom Window using Xaml.csproj", "{4EFBDF01-66B1-475D-A325-8BA58FED3653}"
 EndProject
@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf13 - Resources", "wpf13\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf14 - Styles", "wpf14\wpf14\wpf14 - Styles.csproj", "{80B59430-E710-46E5-A6B3-DAE1C72B6814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf15 - Control Template", "wpf15\wpf15\wpf15 - Control Template.csproj", "{5818E62D-C1BD-429E-9A8C-A9EADA1F0AD5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf15 - Control & Data Template", "wpf15\wpf15\wpf15 - Control & Data Template.csproj", "{5818E62D-C1BD-429E-9A8C-A9EADA1F0AD5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf16 - Graphics", "wpf16\wpf16\wpf16 - Graphics.csproj", "{AD64DBEE-EBE6-4980-9FD1-DE26AF6444BA}"
 EndProject

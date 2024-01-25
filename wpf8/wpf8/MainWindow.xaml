@@ -8,10 +8,12 @@
         Title="MainWindow" Height="450" Width="800">
     <Button
         x:Name="myButton"
+        Click="MyButton_OnClick"
         Height="25"
         Width="400">
         <!-- Set the Content of the Button to a TextBox instead of a string or Image -->
         <TextBox
+            x:Name="myTextBox"
             Width="300"
             Height="20">
         </TextBox>

@@ -20,7 +20,7 @@ namespace wpf12
     /// </summary>
     public partial class MainWindow : Window
     {
-        NickNames nickNames;
+        readonly NickNames nickNames;
         public MainWindow()
         {
             InitializeComponent();

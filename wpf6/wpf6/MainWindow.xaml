@@ -13,6 +13,6 @@
         Height="25"
         Width="400"
         Click="myButton_Click">
-        Hello world!
+        This is the 'content' of the Button
     </Button>
 </Window>
