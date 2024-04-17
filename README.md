@@ -2,7 +2,6 @@
 Step By Step Wpf examples
 
 ## Projects
-
 * Project #1. Empty Wpf Application that only calls MessageBox to show a dialog (No XAML)
 * Project #2. Deriving from Application class and manually instanitating a Window in main() (No XAML)
 * Project #3. Creating your own Window class (deriving from Window) and instanitating it from main() while dynamically creating buttons to add ot the window from code
