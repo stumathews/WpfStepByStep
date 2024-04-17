@@ -12,5 +12,6 @@
             StartupUri="MainWindow.xaml"> <!-- Noteice how this automatically will open the Main Windows when the Application starts -->
 <Application.Resources>
          <!-- We need to better understand how to refer to and use Application.Resources vs Window.Resources etc... !-->
+         <!-- In many instances it is here you can statically instantiate view models and then bind to them if you want  !-->
 </Application.Resources>
 </Application>
